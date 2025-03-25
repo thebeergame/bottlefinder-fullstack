@@ -2,7 +2,6 @@
 const express = require("express");
 const fetch = require("node-fetch");
 const path = require("path");
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -57,7 +56,6 @@ Lien : ...
     res.status(500).json({ error: "Erreur interne du serveur." });
   }
 });
-const path = require("path");
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
