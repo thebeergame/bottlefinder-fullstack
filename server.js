@@ -1,4 +1,3 @@
-
 const express = require("express");
 const fetch = require("node-fetch");
 const path = require("path");
@@ -56,14 +55,12 @@ Lien : ...
     res.status(500).json({ error: "Erreur interne du serveur." });
   }
 });
-const app = express();
-const PORT = process.env.PORT || 3000;
 
-app.use(express.static("public"));
-
+// 👇 AJOUT ICI pour servir le frontend
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
+
 app.listen(PORT, () => {
   console.log(`✅ Server running on http://localhost:${PORT}`);
 });
