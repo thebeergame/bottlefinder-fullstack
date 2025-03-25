@@ -56,7 +56,6 @@ Lien : ...
     res.status(500).json({ error: "Erreur interne du serveur." });
   }
 });
-const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
